@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background-color: black;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:hover {
+    text-shadow: 0px 0px 15px white;
 }
