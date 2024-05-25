@@ -25,14 +25,14 @@ const Navbar = () => {
         } else if (isAuthenticated) {
             return (
                 <>
-                    <li className="inline-block p-5 float-right"><a onClick={handleLogout}>Logout</a></li>
+                    <li className="inline-block m-5 float-right cursor-pointer"><a onClick={handleLogout}>Logout</a></li>
                 </>
             );
         } else {
-            return(
+            return (
                 <>
-                    <li className="inline-block p-5 float-right"><a href="/sign-up">Sign Up</a></li>
-                    <li className="inline-block p-5 float-right"><a href="/login">Login</a></li>
+                    <li className="inline-block m-5 float-right"><a href="/sign-up">Sign Up</a></li>
+                    <li className="inline-block m-5 float-right"><a href="/login">Login</a></li>
                 </>
             );
         }
