@@ -87,3 +87,8 @@ app.get("/auth/status", async (req, res) => {
         res.status(500).json({ isAuthenticated: false });
     }
 });
+
+app.get("/users", authenticate, async (req, res) => {
+    const user = await User.findById(req.decodedToken.userId);
+    res.status(200).json(user);
+});
