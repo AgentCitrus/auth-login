@@ -20,7 +20,7 @@ export default function Profile() {
             }
 
             await axios.get('http://localhost:5000/users', { headers: {
-                    authentication: token
+                    authorization: token
                 }})
                 .then(response => {
                     setShouldRender(true);
