@@ -52,7 +52,7 @@ export default function Signup() {
     };
 
     return (
-        <main className="flex justify-center items-center h-[calc(100vh_-_4rem)] relative top-16">
+        <main className="flex justify-center items-center h-[calc(100vh_-_4rem)] relative">
             <form className="bg-black border-white border px-14 py-14 flex flex-col gap-5">
                 <div>
                     <label className="pr-5" htmlFor="username">Username:</label>

@@ -38,7 +38,7 @@ export default function Profile() {
 
     return (
         shouldRender ? (
-            <main className="mt-16 text-white">
+            <main className="text-white">
                 <p>hello {username}</p>
             </main>
         ) : (
