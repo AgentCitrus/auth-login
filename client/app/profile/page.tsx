@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 
 export default function Profile() {
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [shouldRender, setShouldRender] = useState(false);
     const router = useRouter();
 
@@ -24,7 +25,8 @@ export default function Profile() {
                 }})
                 .then(response => {
                     setShouldRender(true);
-                    setUsername(response.data.username)
+                    setUsername(response.data.username);
+                    setEmail(response.data.email);
                 })
                 .catch(error => {
                     setShouldRender(false);
@@ -38,8 +40,9 @@ export default function Profile() {
 
     return (
         shouldRender ? (
-            <main className="text-white">
-                <p>hello {username}</p>
+            <main className="flex justify-center items-center h-[calc(100vh_-_4rem)] relative bg-black border-white border px-14 py-14">
+                {username}
+
             </main>
         ) : (
             null
